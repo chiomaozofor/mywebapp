@@ -1,0 +1,129 @@
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 40px;
+  }
+  
+  
+  .login1 {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(14, 13, 13, 0.1);
+    width: 650px;
+    text-align: center;
+  }
+  
+  
+  .login2 h2 {
+    font-size: 25Px;
+    /* display: block; */
+    color: rgb(20, 12, 64);
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .login2 h4 {
+    font-size: 15px;
+    color: rgb(48, 26, 48);
+    margin-top: 25px;
+    font-family: sans-serif;
+  }
+  
+  
+  .login3, .login4 {
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .login3 h1, .login4 h1 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+  
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a09e9e;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #fa2c2c;
+  }
+  
+  
+  .login5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    
+  }
+  
+  .remember {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .remember input {
+    margin-right: 10px;
+    
+  }
+ 
+  
+  .login7 a {
+    color: #fa2929;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .login7 a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sign-up and login button */
+  .login6 {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  } 
+  
+  .login6 h5 {
+    font-size: 14px;
+    color: #3b3a3a;
+    margin-bottom: 10px;
+  }
+  
+  .login6 h5 strong {
+    color: #434546;
+    cursor: pointer;
+  }
+  .login6 h5 strong {
+    text-underline-offset: 3px;
+    color: #e30a0a;
+  }
+  
+  button {
+    background-color: #f85151;
+    color: white;
+    padding: 14px 10px;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+    width: 20%;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #e30a0a;
+  }
+  

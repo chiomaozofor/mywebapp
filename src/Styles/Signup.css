@@ -1,0 +1,130 @@
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 40px;
+  }
+  
+  
+  .signup1 {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(14, 13, 13, 0.1);
+    width: 650px;
+    text-align: center;
+  }
+  
+  
+  .signup2 h2 {
+    font-size: 25Px;
+    /* display: block; */
+    color: rgb(20, 12, 64);
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .signup2 h4 {
+    font-size: 13px;
+    color: rgb(48, 26, 48);
+    margin-top: 25px;
+    font-family: sans-serif;
+  }
+  
+  
+  .signup3, .signup4, .signup5, .signup8 {
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .signup3 h1, .signup4 h1, .signup5 h1, .signup8 h1{
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+ 
+  input[type="text"], input[type="password"], input[type="confirm password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a09e9e;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #fa2c2c;
+  }
+  
+  
+  /* .signup5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    
+  } */
+  
+  /*  */
+  
+  /* .remember input {
+    margin-right: 10px;
+    
+  } 
+  */
+  
+  .signup7 a {
+    color: #fa2929;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .signup7 a:hover {
+    text-decoration: underline;
+  }
+  
+
+  .signup6  {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    /* align-content: space-between; */
+    
+  } 
+  
+  .signup6 p {
+    font-size: 14px;
+    color: #3b3a3a;
+    display: block; 
+    margin-top: 10px;
+    text-align: center; 
+  }
+  
+  .signup6 p strong {
+    color: #434546;
+    cursor: pointer;
+  }
+  .signup6 p strong {
+    text-underline-offset: 3px;
+    color: #e30a0a;
+  }
+  
+  button {
+    background-color: #f85151;
+    color: white;
+    padding: 14px 10px;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+    width: 20%;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #e30a0a;
+  }
+  
