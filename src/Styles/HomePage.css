@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
 .HomeWrapper{
     width: 100%;
     height: max-content;
@@ -8,8 +10,6 @@
     justify-content: center;
     background-color: white;
 }
-
-
 
 .navbar {
     /* width: 100%;
@@ -26,6 +26,7 @@
     align-items: center;
     color: white;
     background-color: black;
+    padding: 0px;
     
 
   }
@@ -67,19 +68,21 @@
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    
   }
   
   /* Align Text */
   .left {
     text-align: left;
     position: absolute;
-    left: 10%;
+    left: 50%;
+  
   }
   
   .right {
     text-align: right;
     position: absolute;
-    right: 10%;
+    right: 50%;
   }
   
   /* Show text when active */
@@ -110,7 +113,7 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     /* background-color: aquamarine; */
     opacity: 0;
-    animation: slideUp 1s ease-out 0.6s forwards;
+    animation: slideUp 4s ease-out 0.6s forwards;
   }
 
   @keyframes slideUp {
@@ -144,18 +147,20 @@
     background: #3a3939;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-top: 15px;
+    padding: 15px 20px;
+    font-size: 13px;
     cursor: pointer;
+    margin-top: 10px;
     opacity: 0;
     animation: fadeIn 1s ease-out 1.2s forwards;
+    border-radius: 8px;
   }
 
   .btn-slide:hover{
     background-color: white;
     border: 1px solid black;
     color: black;
+    
   }
   
   /* Animations */
@@ -176,30 +181,30 @@
   
   /* Navigation Buttons */
   .nav-button {
-    width: 50px;
-    height: 100px;
+    width: 30px;
+    height: 10px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.37);
-    color: white;
+    color: grey;
     border: none;
-    padding: 10px 20px;
     font-size: 24px;
     cursor: pointer;
+    margin-bottom: 100px;
     transition: background 0.3s ease;
   }
   
   .nav-button:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(225, 60, 60, 0.8);
   }
   
   .left-btn {
-    left: 20px;
+    left: -13px;
   }
   
   .right-btn {
-    right: 20px;
+    right: 0px;
   }
   
   .product-categories{
@@ -221,9 +226,9 @@
     align-items: center;
     gap: 20px;
 }
-.men { background-image: url(../assets/Nav1.webp); }
-.women { background-image: url(../assets/Nav2.webp); }
-.baby { background-image: url(../assets/Nav3.webp); }
+.men { background-image: url(../assets/mensfashion.webp); }
+.women { background-image: url(../assets/womensfashion.webp); }
+.baby { background-image: url(../assets/babysfashion.webp); }
 
 
 
@@ -244,9 +249,9 @@
     }
 
     .category-box:hover {
-        transform: scale(1.05); /* Slightly increase size */
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
-        filter: brightness(1.1); /* Slightly increase brightness */
+        transform: scale(1.05); 
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); 
+        filter: brightness(1.1); 
       }
 
     
@@ -262,7 +267,7 @@
         justify-content: flex-end;
         align-items: center;
         position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -271,9 +276,8 @@
   transition: transform 0.5s ease-in-out;
     }
 
-    .text-container1 h1, 
-.text-container1 p {
-    font-family: sans-serif, cursive;
+    .text-container1 h1, .text-container1 p {
+  font-family: sans-serif, cursive;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -286,18 +290,18 @@
         font-size: 18px;
         font-weight: bold;
         gap: 10px;
-  margin: 0;
-  bottom: 0
-      }
+        margin: 0;
+       bottom: 0
+}
       
-      .text-container1 p {
-        font-size: 1rem;
-        text-decoration: underline;
-  text-underline-offset: 5px; /* Adds space between text and underline */
+ .text-container1 p {
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 5px; 
   text-decoration-thickness: 1px; 
   gap: 20px;
   color: gold;
-  bottom: -20px; /* Hides below */
+  bottom: -60px;
   opacity: 0;
       }
       
@@ -306,7 +310,7 @@
       }
       
       .category-box:hover .text-container1 p {
-        opacity: 1; /* Show P */
+        opacity: 1; 
   transform: translate(-50%, 0);
   padding-top: 20px;
   gap: 60px;
@@ -327,11 +331,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
   
   .carousel9-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    
   }
   
   .category9-links a {
@@ -340,6 +345,7 @@
     color: black;
     transition: all 0.3s ease;
     position: relative;
+    
   }
   
   .category9-links a:hover {
@@ -350,36 +356,45 @@
     content: '';
     display: block;
     width: 100%;
-    height: 3px;
+    height: 4px;
     background: red;
     position: absolute;
-    bottom: -44px;
+    bottom: -53px;
     left: 0;
   }
   
   .separator9-line {
     width: 100%;
-    height: 2px;
+    height: 1px;
     background: gray;
     margin-bottom: 20px;
   }
   
   /* Carousel Container */
   .carousel9-container {
+    padding: 0px 10px 0px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    /* background: #000; */
+  }
+
+  .carousel9 img{
+    background: #000;
   }
   
   .carousel9 {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     overflow: hidden;
     width: 100%;
   }
   
   .slide9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex: 1;
     transition: transform 0.5s ease-in-out;
     text-align: center;
@@ -392,7 +407,7 @@
   }
   
   .image9-container img {
-    width: 100%;
+    width: 200px;
     display: block;
     transition: transform 0.3s ease;
   }
@@ -445,7 +460,8 @@
   }
   
   .product9-title {
-    font-size: 1.2rem;
+    font-size: 15px;
+    cursor: pointer;
     transition: color 0.3s ease;
   }
   
@@ -467,14 +483,14 @@
   .nav9-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background: white;
+    transform: translateY(-20%);
+    background: black;
     border: none;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
     padding: 10px;
     border-radius: 50%;
-    transition: background 0.3s ease;
+    /* transition: background 0.3s ease; */
   }
   
   .nav9-button:hover {
@@ -483,16 +499,19 @@
   }
   
   .left9-btn {
-    left: -40px;
+    left: -60px;
   }
   
   .right9-btn {
-    right: -40px;
+    right: -60px;
   }
 
+  
+
+  
   .testimony-container {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     background: #F3EAD8;
     display: flex;
     flex-direction: column;
@@ -502,16 +521,17 @@
 }
 
 .testimony-header {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: light;
     margin-bottom: 5px;
 }
 
 .testimony-subtext {
-    font-size: 16px;
-    color: gray;
-    margin-bottom: 20px;
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 20px;
 }
+
 
 .testimony-wrapper {
     display: flex;
@@ -561,7 +581,7 @@
 .nav-button {
     background: none;
     border: none;
-    font-size: 28px;
+    font-size: 20px;
     cursor: pointer;
     position: relative;
     display: flex;
@@ -572,8 +592,8 @@
 /* Animation */
 .slide {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.5s ease-in-out forwards;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -597,7 +617,7 @@
 }
 
 .Latestnewswrapper{
-    width: 80%;
+    width: 90%;
     height: 90%;
     /* background-color: aqua; */
     display: flex;
@@ -609,15 +629,23 @@
 .latestnewsimgandtext{
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 15px;
     /* background-color: brown; */
 
+}
+.latestNewsletter h3 {
+  padding-bottom: 20px;
+  font-size: 25px;
 }
 
 .latestnewsimgandtext h3:hover{
     color: red;
     cursor: pointer;
+    /* font-size: 20px; */
 }
+/* .latestNewsletter p {
+  /* padding-top: 10px; */
+/* } */ */
 
 .Latestnewsimghlder{
     width: 100%;
@@ -637,13 +665,14 @@
 .latestNewsletter{
     width: 100%;
     height: 50%;
-    font-size: 14px;
-    font-weight: smaller;
+    font-size: 15px;
+    font-weight: 200;
     /* gap: 20px; */
     display: flex;
     flex-direction: column;
     /* background-color: aqua; */
-    font-family: sans-serif, cursive, Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
+    cursor: pointer;
 }
 
 
@@ -652,6 +681,7 @@
     text-underline-offset: 3px;
     cursor: pointer;
     transform: scaleX(1);
+    
 }
 
 .latestNewsletter h5:hover{
@@ -672,36 +702,37 @@
     align-items: center;
 }
 
-.man{border-left: 1px solid grey;
-    border-right: 1px solid grey;
+.man{border-right: 1px solid grey;
 }
-.woman{border-left: 1px solid grey;}
+.woman{border-left: 1px solid grey;
+       border-right: 1px solid grey;
+}
 
 .Wrap1er{
     width: 100%;
-    height: 80%;
+    height: 100%;
     /* background-color: rgb(41, 54, 34); */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
 }
 
 .downicon{
     width: 20%;
-    height: max-content;
-    /* background-color: blue; */
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 10px 0px 0px ;
-    font-family: 'jost',sans-serif;
+    text-align: center;
+    font-family: sans-serif;
     
 }
 
 
 .iconhld1{
-    font-size: 80px;
+    font-size: 60px;
+    font-weight: 80;
 }

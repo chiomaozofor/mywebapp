@@ -1,4 +1,4 @@
-import "../Styles/HomePage.css"
+import "../Styles/homepage.css"
 import React, { useState, useEffect } from "react";
 import { FaShoppingCart, FaHeart, FaSearch } from "react-icons/fa";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -6,6 +6,9 @@ import { PiTruckLight } from "react-icons/pi";
 import { CiCreditCard1 } from "react-icons/ci";
 import { GiBank } from "react-icons/gi";
 import { TbClock24 } from "react-icons/tb";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Header from "../Component/Header";
 
 
 
@@ -15,19 +18,19 @@ import { TbClock24 } from "react-icons/tb";
 const testimonials = [
   {
     text: "This product has completely changed my life. The quality is amazing, and the customer support is outstanding!",
-    image: "src/assets/ceo.webp",
+    image: "src/assets/testimonial.webp",
     name: "John Doe",
     stack: "Software Engineer",
   },
   {
     text: "I love how easy it is to use this platform. It has saved me so much time and effort. Highly recommended!",
-    image: "src/assets/ceo.webp",
+    image: "src/assets/Before and After_ Transforming Your LinkedIn Profile with AI Headshots.jpeg",
     name: "Emily Smith",
     stack: "Product Designer",
   },
   {
     text: "The best investment I have ever made. Their service is top-notch, and I couldn't be happier with the results!",
-    image: "src/assets/ceo.webp",
+    image: "src/assets/741a7101-87c6-410f-b24e-e0f84d8528da.jpeg",
     name: "Michael Brown",
     stack: "Business Owner",
   },
@@ -43,18 +46,24 @@ const images9 = [
   { url: "src/assets/whiteredwoman.webp" },
   { url: "src/assets/whitekorean.webp" },
   { url: "src/assets/whitewoman.jpg" },
+  { url: "src/assets/whiteboy.webp" },
+  { url: "src/assets/whitewoman.jpg" },
+  { url: "src/assets/whitewoman.jpg" },
 ];
 
 const youLikeImages = [
-  { url: "src/assets/youlike1.webp" },
-  { url: "src/assets/youlike2.webp" },
-  { url: "src/assets/youlike3.webp" },
-  { url: "src/assets/youlike4.webp" },
-  { url: "src/assets/youlike5.webp" },
-  { url: "src/assets/youlike6.webp" },
-  { url: "src/assets/youlike9.webp" },
-  { url: "src/assets/youlike8.webp" },
-  { url: "src/assets/youlike7.webp" },
+  { url: "src/assets/curlyiron.webp" },
+  { url: "src/assets/handcream.webp" },
+  { url: "src/assets/latest6.jpg.webp" },
+  { url: "src/assets/wristwatchitems.webp" },
+  { url: "src/assets/mywebimage.jpg" },
+  { url: "src/assets/curlyiron.webp" },
+  { url: "src/assets/handcream.webp" },
+  { url: "src/assets/latest6.jpg.webp" },
+  { url: "src/assets/wristwatchitems.webp" },
+  { url: "src/assets/curlyiron.webp" },
+  { url: "src/assets/handcream.webp" },
+  { url: "src/assets/latest6.jpg.webp" },
 ];
 
 
@@ -95,6 +104,7 @@ const HomePage = () => {
     );
   };
 
+
 // State for trending carousel
 const [currentTrendingIndex, setCurrentTrendingIndex] = useState(0);
 const trendingPages = Math.ceil(images9.length / 4);
@@ -112,14 +122,15 @@ const trendingNextSlide = () => {
 };
 
 const images = [
-  {
-    url: "src/assets/navbar.jpg",
-    align: "left",
-  },
-  {
-    url: "src/assets/navbar2.jpg",
+   {
+    url: "src/assets/h1_hero1.jpg",
     align: "right",
   },
+  {
+    url: "src/assets/h1_hero2.jpg",
+    align: "left",
+  },
+ 
 ];
 
 
@@ -152,7 +163,7 @@ useEffect(() => {
 
   return (
     <>
-   
+   <Header />
     <div className="HomeWrapper">
            <div>
       <nav className="navbar">
@@ -163,6 +174,7 @@ useEffect(() => {
         className="hero-section"
         style={{ backgroundImage: `url(${images[currentIndex].url})` }}
       >
+       
         <div className={`text-container ${images[currentIndex].align}`}>
           <h2 className="fade-in h2">Fashion Sale</h2>
           <h1 className="slide-up h1" color="red">Minimal Menz Style</h1>
@@ -174,9 +186,7 @@ useEffect(() => {
           <button className="btn-slide">Shop Now</button>
         </div>
 
-        <button className="nav-button left-btn" onClick={prevSlide}>❮</button>
-        <button className="nav-button right-btn" onClick={nextSlide}>❯</button>
-      </section>
+            </section>
     </div>
     <div className="product-categories">
       <div className="categories-wrapper">
@@ -219,10 +229,13 @@ useEffect(() => {
   
   {/* Gray Separator Line */}
   <div className="separator9-line"></div>
-
+    
+    
   {/* Carousel */}
   <div className="carousel9-container">
-    <button className="nav9-button left9-btn" onClick={trendingPrevSlide}>❮</button>
+    <button className="nav-button left-btn" onClick={trendingPrevSlide}>❮</button>
+    {/* <button className="nav9-button left9-btn" onClick={trendingPrevSlide}>❮</button> */}
+    
     <div className="carousel9">
       {images9
         .slice(currentTrendingIndex * 4, currentTrendingIndex * 4 + 4)
@@ -254,12 +267,13 @@ useEffect(() => {
           </div>
         ))}
     </div>
-    <button className="nav9-button right9-btn" onClick={trendingNextSlide}>❯</button>
+    {/* <button className="nav9-button right9-btn" onClick={trendingNextSlide}>❯</button> */}
+    <button className="nav-button right-btn" onClick={trendingNextSlide}>❯</button>
   </div>
 </div>
 <div className="testimony-container">
     <h2 className="testimony-header">Customer Testimonial</h2>
-    <p className="testimony-subtext">What our customers are saying</p>
+    {/* <p className="testimony-subtext">What our customers are saying</p> */}
 
     <div className="testimony-wrapper">
       <button className="nav-button left-btn" onClick={decrementTestimonial}>
@@ -293,9 +307,8 @@ useEffect(() => {
     </div>
   </div>
   <div className="carousel9-section">
-      {/* Header Section */}
       <div className="carousel9-header">
-        <h2>You May Also Like</h2>
+        <h2>You May Like</h2>
         <div className="category9-links">
           <a href="#">Men</a>
           <a href="#">Women</a>
@@ -309,7 +322,8 @@ useEffect(() => {
 
       {/* Carousel */}
       <div className="carousel9-container">
-        <button className="nav9-button left9-btn" onClick={prevCarouselSlide2}>❮</button>
+        {/* <button className="nav9-button left9-btn" onClick={prevCarouselSlide2}>❮</button> */}
+        <button className="nav-button left-btn" onClick={prevCarouselSlide2}>❮</button>
         <div className="carousel9">
           {youLikeImages
             .slice(currentCarouselIndex2 * 4, currentCarouselIndex2 * 4 + 4)
@@ -331,7 +345,7 @@ useEffect(() => {
                     </div>
                   </div>
                 </div>
-                {/* Product Name & Price */}
+                
                 <div className="product9-details">
                   <h2 className="product9-title">Cashmere Tank + Bag</h2>
                   <p className="price9">
@@ -341,14 +355,15 @@ useEffect(() => {
               </div>
             ))}
         </div>
-        <button className="nav9-button right9-btn" onClick={nextCarouselSlide2}>❯</button>
+        <button className="nav-button right-btn" onClick={nextCarouselSlide2}>❯</button>
+        {/* <button className="nav9-button right9-btn" onClick={nextCarouselSlide2}>❯</button> */}
       </div>
     </div>
       <div className="LatestNews">
         <div className="Latestnewswrapper">
        <div className="latestnewsimgandtext">
         <div className="Latestnewsimghlder">
-          <img src="src/assets/like1.webp" alt="" className="latestnewsImage" />
+          <img src="src/assets/cokebottle.webp" alt="" className="latestnewsImage" />
         </div>
         <div className="latestNewsletter">
 
@@ -360,7 +375,7 @@ useEffect(() => {
        </div>
        <div className="latestnewsimgandtext">
         <div className="Latestnewsimghlder">
-          <img src="src/assets/like2.webp" alt=""  className="latestnewsImage" />
+          <img src="src/assets/clothepieces.webp" alt=""  className="latestnewsImage" />
         </div>
         <div className="latestNewsletter">
 
@@ -372,7 +387,7 @@ useEffect(() => {
        </div>
        <div className="latestnewsimgandtext">
         <div className="Latestnewsimghlder">
-          <img src="src/assets/like3.webp" alt="" className="latestnewsImage" />
+          <img src="src/assets/mayimoisturebottle.webp" alt="" className="latestnewsImage" />
         </div>
         <div className="latestNewsletter">
         <p>Fashion Tips</p>
@@ -387,14 +402,14 @@ useEffect(() => {
       <div className="Wrap1er">
          <div className="downicon">
             <div className="iconhld1"><PiTruckLight /></div>
+            
             <h3>
             Fast & Free Delivery
             </h3>
             <p>
-
             Free delivery on all orders   
             </p>
-         </div>
+          </div>
          <div className="downicon woman">
             <div className="iconhld1"><CiCreditCard1 /></div>
             <h3>
@@ -432,4 +447,4 @@ useEffect(() => {
   );
 };
 
-export default HomePage
+export default HomePage;

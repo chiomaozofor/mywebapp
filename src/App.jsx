@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ProductDetails from './Pages/ProductDetails';
@@ -12,6 +13,8 @@ import Signup from './Pages/auth/Signup';
 import Contact from './Pages/Contact';
 import User from './Pages/User';
 import ProductCheckout from './Pages/ProductCheckout';
+import Spinner from './Component/Spinner';
+import LogoSpinner from './Component/Logospinner';
 
 const routes = createBrowserRouter ([
    {
@@ -20,11 +23,13 @@ const routes = createBrowserRouter ([
     children: [
       {
         path: "",
-        element: <HomePage />,
+        element: 
+          <HomePage />,
       },
       {
         path: "/productdetails",
         element: <ProductDetails />,
+        
       },
       {
         path: "/productpage",
@@ -64,11 +69,26 @@ const routes = createBrowserRouter ([
 ])
 
 const App = () => {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LogoSpinner />;
+  }
   return (
-    <div>
-      <RouterProvider router={routes} />
-    </div>
-  )
+
+  //  <Spinner>
+     <RouterProvider router={routes} />
+  //  </Spinner>
+    
+    
+  );
 }
+
 
 export default App

@@ -60,7 +60,7 @@ const Header = () => {
 
         <div className="Categories">
           <ul className="ul-header">
-            <li className="li-header">Home</li>
+            <li className="li-header" onClick={() => navigate(" ")}>Home</li>
             <li className="li-header">Men</li>
             <li className="li-header">Women</li>
             <li className="li-header">Baby Collections</li>
@@ -85,7 +85,7 @@ const Header = () => {
                   <li>Cart</li>
 
                   </NavLink>
-                  <NavLink to={"productdetails"}>
+                  <NavLink to={"/productdetails"}>
                   <li>Product Details</li>
 
                   </NavLink>
@@ -107,7 +107,7 @@ const Header = () => {
               {activeDropdown === "blog" && (
                 <ul 
                   className="showdropdown2"
-                  onMouseEnter={() => setActiveDropdown("blog")}
+                  onMouseEnter={() => setActiveDropdown("/blog")}
                   onMouseLeave={handleMouseLeave}
                 >
                   <li>Blog</li>
@@ -137,10 +137,10 @@ const Header = () => {
         )}
           </i>
           <div className="i-nav">
-            <CgProfile onClick={() => Navigate("/login")} />
+            <CgProfile onClick={() => navigate("/login")} />
             </div>
           <i className="i-nav">
-            <HiOutlineShoppingCart />
+            <HiOutlineShoppingCart  onClick={() => navigate("/cart")}/>
             <p className="cartcount">1</p>
           </i>
         </div>

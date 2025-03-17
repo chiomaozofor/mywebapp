@@ -1,0 +1,53 @@
+.spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .spinner {
+    position: relative;
+    width: 100px; 
+    height: 100px;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+  }
+  
+ 
+  .spinner-logo {
+    position: absolute;
+    z-index: 1000;
+    top: 55%;
+    left: 70%;
+    /* border-radius: 10px; */
+    transform: translate(-50%, -50%);
+    width: 70px;  /* Adjust logo size as needed */
+    height: 70px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  
+  
+  .spinner::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    width: 95px;
+    height: 95px;
+    border: 2px dashed red;  /* 5px dotted red border */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 4s linear infinite;
+  }
+  
+  /* Animation for rotating the circle */
+  @keyframes spin {
+    from { transform: translate(-40%, -40%) rotate(0deg); }
+    to { transform: translate(-40%, -40%) rotate(360deg); }
+  }
+  

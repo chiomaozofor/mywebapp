@@ -290,11 +290,12 @@ p {
 }
 
 .descriptiontext {
-    width: 80%;
+    width: 90%;
     height: 60%;
     /* background-color: greenyellow; */
     display: flex;
-    padding: 50px;
+    padding: 80px;
+    font-size: 20px;
     /* flex-direction: column; */
     /* align-items: center; */
     /* justify-content: center; */

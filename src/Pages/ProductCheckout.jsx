@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../Styles/ProductCheckout.css";
+import "../Styles/productcheckout.css";
 
 const ProductCheckout = () => {
   return (

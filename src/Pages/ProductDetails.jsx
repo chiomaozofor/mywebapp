@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/ProductDetails.css";
+import "../Styles/productdetails.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const ProductDetails = () => {

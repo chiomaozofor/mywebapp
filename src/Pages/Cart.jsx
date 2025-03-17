@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
+import "../Styles/cart.css";
 
 const Cart = () => {
   return (
-    <div>
-      cart
-    </div>
-  )
-}
+    <div className="cartwrapper">
+      <div className="cartdetailsbody">
+        <h2>Cart</h2>
+        <div className="carttextwrapper">
+          <p className="hometext">Home</p>
+          <p>Cart</p>
+        </div>
+      </div>
+      <div className="cartdetailwrapper">
 
-export default Cart
+      </div>
+    </div>
+  );
+};
+
+export default Cart;
